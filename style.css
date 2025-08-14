@@ -40,6 +40,6 @@ header {
 
 .nav_item:hover {
     background-color: rgb(234, 234, 234);
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: underline;
 }
