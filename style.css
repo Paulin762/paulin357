@@ -39,7 +39,7 @@ header {
 
 
 .nav_item:hover {
-    background-color: black;
+    background-color: rgb(234, 234, 234);
     color: black;
     text-decoration: underline;
 }
