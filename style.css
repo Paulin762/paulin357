@@ -38,7 +38,7 @@ header {
 }
 
 
-.nav_item :hover {
+.nav_item:hover {
     background-color: black;
     color: black;
     text-decoration: underline;
