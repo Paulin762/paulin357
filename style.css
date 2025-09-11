@@ -18,7 +18,11 @@ header {
 
 #logo {
     font-size: 1.5rem;
+    color: aliceblue;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .navbar {
     width: 100%;
@@ -62,6 +66,8 @@ section {
 titulo {
     font-size: 4rem;
     color: aquamarine;
+    text-align: center;
+    width: 100%;
 }
 
 /* Menu hambúrguer para mobile */
