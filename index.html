@@ -1,72 +1,97 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maravilha Sound</title>
-
-    <!-- CSS local -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Ícones do Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css&quot;
+integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" type="image/png" href="favicon.png">
+<title>PobriFy</title>
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="navbar">
-            <i class="fa-solid fa-music" id="logo"> Maravilha</i>
+<header class="cabecalho">
+<nav class="navbar">
+<i id="Logo" class="fa-solid fa-music"> PobriFy</i> <!---->
 
-            <!-- Botão menu hambúrguer (mobile) -->
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<button class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
-            <!-- Lista de navegação -->
-            <ul class="nav_lista" id="navLista">
-                <li class="nav_item">modão</li>
-                <li class="nav_item">sertanejo</li>
-                <li class="nav_item">verso</li>
-                
-            </ul>
-        </nav>
-    </header>
+<ul class="nav_lista" id="navLista">
+<li class="nav_item">Rock</li>
+<li class="nav_item">Gospel</li>
+<li class="nav_item">Samba</li>
+</ul>
+</nav>
+<p style="font: 20px Arial; color: white;"><strong>Músicas com qualidade duvidosa é aqui!</strong></p>
+</header>
+<hr>
 
-    <main class="conteudo">
-        <!-- Seção principal -->
-        <section class="home">
-            <h1 class="titulo">
-                A melhor seleção de <span class="titulocor">músicas</span> de Maravilha
-            </h1>
-        </section>
+<main class="conteudo">
 
-     
-    </main>
+<section class="home">
+<h1 class="titulo">Músicas Mais <span class="titulocor">Acessadas</span> desta semana❤️</h1>
+</section>
 
-    <!-- Script para menu hambúrguer -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLista = document.getElementById('navLista');
+<section class="secao" id="Rock">
+<div class="titulo_section">
+<h1><i class="fa-solid fa-guitar">Rock</i></h1>
+</div>
+<ul class="moldura_videos">
+<li class="video">
 
-        menuToggle.addEventListener('click', function () {
-            navLista.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
+</li>
+</ul>
+</section>
 
-        // Fecha o menu ao clicar em um item
-        const navItems = document.querySelectorAll('.nav_item');
-        navItems.forEach(item => {
-            item.addEventListener('click', function () {
-                navLista.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-    </script>
+<section class="secao" id="Samba">
+<div class="titulo_section">
+<h1><i class="fa-solid fa-drum">Samba</i></h1>
+</div>
+<ul class="moldura_videos">
+<li class="video">
+
+</li>
+</ul>
+</section>
+
+<section class="secao" id="Gospel">
+<div class="titulo_section">
+<section class="secao" id="Gospel">
+<div class="titulo_section">
+<h1><i class="fa-solid fa-book-bible">Gospel</i></h1>
+</div>
+<ul class="moldura_videos">
+<li class="video">
+
+</li>
+</ul>
+</section>
+</main>
+
+<script>
+// JavaScript para controlar o menu hambúrguer
+const menuToggle = document.getElementById('menuToggle');
+const navLista = document.getElementById('navLista');
+
+menuToggle.addEventListener('click', function () {
+navLista.classList.toggle('active');
+menuToggle.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um item
+const navItems = document.querySelectorAll('.nav_item');
+navItems.forEach(item => {
+item.addEventListener('click', function () {
+navLista.classList.remove('active');
+menuToggle.classList.remove('active');
+});
+});
+</script>
+
 </body>
 
 </html>
