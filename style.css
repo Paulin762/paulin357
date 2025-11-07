@@ -1,189 +1,241 @@
-body {
-background: url(https://media.istockphoto.com/id/1523130039/pt/foto/green-rustic-texture-high-quality-texture-in-extremely-high-resolution-dark-green-grunge.jpg?s=612x612&w=0&k=20&c=p-ThP5-uQ9KWh3HZTZ0olsv7hi5DLyOBK3ghdEMzn48=);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-primaria-1: #241623;
+    --cor-primaria-2: #D0CD94;
+    --cor-primaria-3: #3C787E;
+    --cor-primaria-4: #C7EF00;
+    --cor-primaria-5: #D56F3E;
+
+    --cor-secundaria-1: #fff;
+    --cor-secundaria-2: #1d1d1d;
 }
 
-#Logo {
-font-size: 50px;
-font-weight: 600;
-color: white;
-display: flex;
-align-items: center;
-gap: 8px;
-}
+
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 header {
-width: 100%;
-height: 100%;
-padding: 20px 8%;
-background: url(https://thumbs.dreamstime.com/b/preto-e-escuro-abstratos-fundo-verde-da-textura-projeto-do-grunge-com-pintura-antiga-elegante-na-ilustra%C3%A7%C3%A3o-parede-ou-papel-de-141957864.jpg);
-position: relative;
-top: 0;
-left: 0;
-z-index: 1000;
-
+    width: 100%;
+    padding: 20px 8%;
+    background-color: var(--cor-primaria-4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.nav_item {
-color: white;
-font-size: 20px;
-font: bold;
-padding: 5px 5px 5px;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.nav_item:hover {
-background-color: green;
-text-decoration: underline;
-border-radius: 8px;
+#logo {
+    font-size: 1.5rem;
+    color: var(--cor-secundaria-2);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .navbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav_lista {
-display: flex;
-list-style: none;
-gap: 80px;
-text-transform: uppercase;
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    text-transform: uppercase;
 }
 
-.home {
-display: flex;
-min-height: calc(100vh-91px);
-margin-top: 91px;
+.nav_item {
+    font-size: 25px;
+    color: var(--cor-secundaria-1);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-section {
-width: 100%;
-padding: 20px 8%;
-display: flex;
-justify-content: center;
+a {
+    text-decoration: none;
 }
 
-.titulo {
-font-size: 30px;
-color: white;
-text-align: center;
-width: 100%;
-}
+ .nav_item:hover {
+    background-color:var(--cor-primaria-5) ;
+    color: var(--cor-secundaria-1);
+    text-decoration: underline;
+ }
 
-.titulocor {
-color: rgb(60, 255, 0);
-}
+ .home {
+    display: flex;
+    padding: 60px 0 20px;
+    margin-top: 91px;
+ }
 
-/* Menu hambúrguer para mobile */
+ section {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: center;
+ }
+
+ .titulo {
+    font-size: 4rem;
+    color: var(--cor-secundaria-2);
+    text-align: center;
+    width: 100%;
+ }
+
+ .titulocor {
+    color: var(--cor-primaria-4);
+ }
+
+ .secao {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+ }
+
+ .titulo_section {
+    width: 100%;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+ }
+
+ .moldura_videos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+ }
+
+ .video {
+    width: 100%;
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 16px;
+    border: 4px solid var(--cor-primaria-4);
+ }
+
+ /* Menu hambúrguer para mobile */
 .menu-toggle {
-display: none;
-flex-direction: column;
-cursor: pointer;
-background: none;
-border: none;
-padding: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
 }
 
 .menu-toggle span {
-width: 25px;
-height: 3px;
-background-color: white;
-margin: 3px 0;
-transition: 0.3s;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-secundaria-1);
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 /* Media queries para responsividade */
 @media (max-width: 768px) {
-header {
-padding: 15px 5%;
+    header {
+        padding: 15px 5%;
+    }
+    
+    #logo {
+        font-size: 1.2rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav_lista {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--cor-primaria-4);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 30px;
+        transition: left 0.3s ease;
+    }
+    
+    .nav_lista.active {
+        left: 0;
+    }
+    
+    .nav_item {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+    /* Animação do menu hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
-#logo {
-font-size: 1.2rem;
-}
-
-.menu-toggle {
-display: flex;
-}
-
-.nav_lista {
-position: fixed;
-top: 70px;
-left: -100%;
-width: 100%;
-height: calc(100vh - 70px);
-background: url(https://thumbs.dreamstime.com/b/preto-e-escuro-abstratos-fundo-verde-da-textura-projeto-do-grunge-com-pintura-antiga-elegante-na-ilustra%C3%A7%C3%A3o-parede-ou-papel-de-141957864.jpg);
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-padding-top: 50px;
-gap: 30px;
-transition: left 0.3s ease;
-}
-
-.nav_lista.active {
-left: 0;
-}
-
-.nav_item {
-font-size: 20px;
-padding: 10px 20px;
-border-radius: 5px;
-}
-
-/* Animação do menu hambúrguer */
-.menu-toggle.active span:nth-child(1) {
-transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-transform: rotate(45deg) translate(-5px, -6px);
-}
-}
 
 @media (max-width: 480px) {
-header {
-padding: 10px 3%;
+    header {
+        padding: 10px 3%;
+    }
+    
+    #logo {
+        font-size: 1rem;
+    }
+    
+    .nav_item {
+        font-size: 18px;
+    }
 }
 
-#logo {
-font-size: 1rem;
-}
-
-.nav_item {
-font-size: 18px;
-}
-}
 
 /* Media queries para o título */
 @media (max-width: 768px) {
-.titulo {
-font-size: 2.5rem;
-text-align: center;
-}
-
-section {
-padding: 20px 5%;
-}
+    .titulo {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    section {
+        padding: 20px 5%;
+    }
 }
 
 @media (max-width: 480px) {
-.titulo {
-font-size: 2rem;
-}
-
-section {
-padding: 20px 3%;
-}
+    .titulo {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 20px 3%;
+    }
 }
